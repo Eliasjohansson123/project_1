@@ -1,0 +1,33 @@
+@media screen and (orientation: landscape){
+
+            #flexContainer{
+            display:flex;
+            flex-direction: row;
+            gap: 10vw;
+            }
+            
+        }
+        @media screen and (orientation: portrait) {
+            #flexContainer{
+                display:flex;
+                flex-direction:column;
+                gap: 10vh;
+            }
+        }
+        #flexContainer{
+            align-content:stretch;
+            justify-content:space-evenly;
+        }
+        
+        .flexItem{
+            background-color:#E2DDb4;
+            padding:1vw red;
+            flex: 1 1;
+            border : 3px black solid;
+            font-family:"Monaco", "Courier New", monospace;
+            font-size:1.2em;
+        }
+
+        body{
+            background-color: #F6Efd2;
+        }

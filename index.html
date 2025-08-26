@@ -4,10 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Min första webbsida</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <style>
+        /*@media screen and (orientation: landscape){
+
+            #flexContainer{
+            display:flex;
+            flex-direction: row;
+            gap: 10vw;
+            }
+            
+        }
+        @media screen and (orientation: portrait) {
+            #flexContainer{
+                display:flex;
+                flex-direction:column;
+                gap: 10vh;
+            }
+        }
+        #flexContainer{
+            align-content:stretch;
+            justify-content:space-evenly;
+        }
+        
+        .flexItem{
+            background-color:#E2DDb4;
+            padding:1vw red;
+            flex: 1 1;
+            border : 3px black solid;
+            font-family:"Monaco", "Courier New", monospace;
+            font-size:1.2em;
+        }
+
+        body{
+            background-color: #F6Efd2;
+        }
+        */
+
+    </style>
 </head>
 <body>
-    <h1>Hej</h1>
-    <h1>Chas Academy!</h1>
-    <p>Min första webbsida är nu online.</p>
+<img id="selfie" src="images/JAG.jpg" alt="En bild från Serien 'JAG'"/>
+    <div id="flexContainer">
+
+        <div class="flexItem">
+            <h2>
+                Mina Hobbies!
+            </h2>
+            <ul>
+                <li>Hobby1</li>
+                <li>Hobby2</li>
+                <li>Hobby3</li>
+                <li>Hobby4</li>
+            </ul>
+            
+        </div>
+
+        <div class="flexItem">
+            Lorem ipsum
+        </div>
+
+    </div>
 </body>
 </html>
