@@ -1,31 +1,66 @@
 @media screen and (orientation: landscape){
+  
     #flexContainer{
     display:flex;
     flex-direction: row;
-    gap: 10vw;
+    gap: 50vw;
     }
-
 }
+
 @media screen and (orientation: portrait) {
-  #flexContainer{
+  
+    #flexContainer{
       display:flex;
       flex-direction:column;
       gap: 10vh;
+      width:40vw;
   }
 }
+
+header{
+    top:0;
+    height:100px;
+    width: 100vw;
+    background-color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size:2em;
+    position:sticky;
+}
+header a{
+    text-decoration: none;
+    color: #000;
+    margin-top: 50%;
+    left: 10px;
+}
+
 #flexContainer{
+    height:200vh;
     align-content:stretch;
-    justify-content:space-evenly;
+    justify-content:space-between;
 }
      
 .flexItem{
-    background-color:#E2DDb4;
-    padding:1vw red;
+    height: inherit;
+    background-color:#E2DDb49f;
+    padding:1vw;
     flex: 1 1;
-    border : 3px black solid;
     font-family:"Monaco", "Courier New", monospace;
     font-size:1.2em;
 }
+
 body{
+    margin: 0;
+    padding: 0;
     background-color: #F6Efd2;
+}
+#heroImage{
+    position: fixed;
+    width:auto;
+    height: 90vh;
+    left: calc(50vw - 45vh);
+    top:100px;
+    background-image: url("../images/JAG.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-color:#F6Efd2;
 }
