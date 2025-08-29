@@ -3,7 +3,7 @@
     #flexContainer{
     display:flex;
     flex-direction: row;
-    gap: 50vw;
+    gap: 23vw;
     }
 }
 
@@ -25,6 +25,7 @@ header{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size:2em;
     position:sticky;
+    z-index:1000;
 }
 header a{
     text-decoration: none;
@@ -34,18 +35,26 @@ header a{
 }
 
 #flexContainer{
-    height:200vh;
-    align-content:stretch;
+    position:absolute;
+    /*background-color: rgba(120, 120, 255, 0.4);*/
+    height:100vh;
+    width:50vw;
+    left:23vw;
+    align-content:center;
     justify-content:space-between;
 }
      
 .flexItem{
-    height: inherit;
-    background-color:#E2DDb49f;
+    top: 35%;
+    height:25%;
+    position:relative;
+    color:white;
+    /*background-color:rgba(255,120,120, 0.5);*/
     padding:1vw;
     flex: 1 1;
     font-family:"Monaco", "Courier New", monospace;
     font-size:1.2em;
+    font-weight: 1000;
 }
 
 body{
@@ -55,11 +64,10 @@ body{
 }
 #heroImage{
     position: fixed;
-    width:auto;
+    width:100vw;
     height: 90vh;
-    left: calc(50vw - 45vh);
     top:100px;
-    background-image: url("../images/JAG.jpg");
+    background-image: url("../images/ful.jpg");
     background-repeat:no-repeat;
     background-size:cover;
     background-color:#F6Efd2;

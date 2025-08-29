@@ -1,16 +1,80 @@
+@media only screen and (orientation: landscape){
+    #timeline-grid{
+        grid-template-columns: 30vw 70vw;
+        top:100px;
+    }
+    .timeline-column-item{
+    grid-area: 1 / 2 / span 4 / span 1;
+    }
+
+}
+@media only screen and (orientation: portrait){
+    #timeline-grid{
+        top:100px;
+        grid-template-columns:repeat(4, 1fr);
+        grid-template-rows: 3fr 7fr;
+    }
+    .timeline-column-item{
+        grid-area: 2 / 1 / span 1 / span 4;
+    }
+}
+
+@keyframes curtain-animation{
+    from {top: calc(-100vh + (100px + 30vh));}
+    to {top:0;}
+}
+@keyframes button-click{
+    from{background-color: #e6dfc5;}
+    to{background-color: #cfc9b2;}
+}
+
 body{
     padding: 0;
     margin: 0;
 }
+header{
+    z-index: 1000;
+    top:0;
+    height:100px;
+    width: 100vw;
+    background-color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size:2em;
+    position:sticky;
+}
+label{
+    width: 100%;
+    height: 100%;
+    margin:0;
+    padding:0;
+    top:0;
+}
+h2{
+    display:inline-block;
+}
+header a{
+    text-decoration: none;
+    color: #000;
+    margin-top: 50%;
+    left: 10px;
+}
+.timeline-item{
+    padding:0;
+    margin:0;
+    z-index:2;
+}
 #timeline-grid{
     display: grid;
-    height: 100vh;
+    height: calc(100vh - 100px);
     width: 100vw;
     background-color: #F6Efd2;
-    grid: 20vh / 30vw 70vw;
+    
 }
 #timeline-grid > div{
     border: 2px solid black;
+}
+#timeline-grid > div:hover{
+    background-color:#e6dfc5;
 }
 #timeline-grid div label div{
     width: 100%;
@@ -19,23 +83,23 @@ body{
 input{
     display: none;
 }
-.timeline-column-item{
-    grid-area: 1 / 2 / span 4 / span 1;
-}
+
 #item1:checked ~ #timeline-grid div #expansion-label1 div,
 #item2:checked ~ #timeline-grid div #expansion-label2 div,
 #item3:checked ~ #timeline-grid div #expansion-label3 div,
 #item4:checked ~ #timeline-grid div #expansion-label4 div{
-    background-color: #E6DfC2;
+    top:0;
+    background-color: #cfc9b2;
+    animation-name:button-click;
+    animation-duration:250ms;
+    animation-timing-function:ease-in-out;
+    animation-direction:alternate-reverse;
 }
 
 .timeline-column-item div{
-    z-index: 3;
-    position: relative;
+    position:relative;
     display: none;
     background-color: red;
-    height: 100px;
-    width: 100px;
 }
 
 #item1:checked ~ #timeline-grid div #column-content1,
@@ -45,6 +109,13 @@ input{
     display: block;
     width: 100%;
     height: 100%;
+    animation-name:curtain-animation;
+    animation-duration: 2s;
+    animation-timing-function:ease-in;
+    animation-fill-mode:forwards;
+    font-size: 1.2rem;
+    font-weight: 400;
+    z-index:1;
 }
 
 input:checked , .timeline-column-item{
