@@ -50,7 +50,13 @@ label{
     top:0;
 }
 h2{
-    display:inline-block;
+    padding: 0;
+    margin: 0;
+}
+h3{
+    padding: 0;
+    margin: 0;
+
 }
 header a{
     text-decoration: none;
@@ -72,6 +78,7 @@ header a{
 }
 #timeline-grid > div{
     border: 2px solid black;
+    background-color: #F6Efd2;
 }
 #timeline-grid > div:hover{
     background-color:#e6dfc5;
@@ -110,7 +117,7 @@ input{
     width: 100%;
     height: 100%;
     animation-name:curtain-animation;
-    animation-duration: 2s;
+    animation-duration: 500ms;
     animation-timing-function:ease-in;
     animation-fill-mode:forwards;
     font-size: 1.2rem;

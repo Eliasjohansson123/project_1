@@ -13,7 +13,7 @@
       display:flex;
       flex-direction:column;
       gap: 10vh;
-      width:40vw;
+      width:50vw;
   }
 }
 
@@ -36,7 +36,6 @@ header a{
 
 #flexContainer{
     position:absolute;
-    /*background-color: rgba(120, 120, 255, 0.4);*/
     height:100vh;
     width:50vw;
     left:23vw;
@@ -49,7 +48,6 @@ header a{
     height:25%;
     position:relative;
     color:white;
-    /*background-color:rgba(255,120,120, 0.5);*/
     padding:1vw;
     flex: 1 1;
     font-family:"Monaco", "Courier New", monospace;

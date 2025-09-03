@@ -24,16 +24,24 @@
 
     </div>
 
-    <div id="floor-graphics"></div>
+    <div id="floor-graphics">
+
+    </div>
     
 
     <script type="text/JavaScript">
 
         let order = [0,1,2,1,0];
 
-        function carouselSpin() {
-            
+        function carouselSpin(x) {
+            content = document.querySelector("#carousel-container").innerHTML;
+            console.log(content);
         }
+        setInterval(() => {
+
+            carouselSpin();
+
+        }, 5000);
     </script>
 
 </body>
