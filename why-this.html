@@ -16,11 +16,11 @@
 
     <div id="carousel-container">
 
-        <div class="carousel-content"></div>
-        <div class="carousel-content"></div>
-        <div class="carousel-content"></div>
-        <div class="carousel-content"></div>
-        <div class="carousel-content"></div>
+        <div class="change-pic" onclick="carouselSpinBack()"></div>
+
+        <div class="carousel-content"><img alt="company1" src="images/companies/comp1.jpg"></div>
+
+        <div class="change-pic" onclick="carouselSpinForward()"></div>
 
     </div>
 
@@ -31,17 +31,28 @@
 
     <script type="text/JavaScript">
 
-        let order = [0,1,2,1,0];
+        
+        content = document.querySelector(".carousel-content")
 
-        function carouselSpin(x) {
-            content = document.querySelector("#carousel-container").innerHTML;
-            console.log(content);
+        let i = 1;
+        
+
+        function carouselSpinForward() {
+
+            content.innerHTML = "<img alt='company'" + i + " src='images/companies/comp" + i + ".jpg'>";
+            i++;
+            if(i>4){
+                i=1;
+            }
         }
-        setInterval(() => {
+        function carouselSpinBack() {
+            content.innerHTML = "<img alt='company'" + i + " src='images/companies/comp" + i + ".jpg'>";
+            i--;
 
-            carouselSpin();
-
-        }, 5000);
+            if(i < 1){
+                i=4;
+            }
+        }
     </script>
 
 </body>

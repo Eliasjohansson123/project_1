@@ -1,4 +1,8 @@
 @media only screen and (orientation: landscape){
+    @keyframes curtain-animation{
+    from {top: calc(-100vh + 100px);}
+    to {top:0;}
+}
     #timeline-grid{
         grid-template-columns: 30vw 70vw;
         top:100px;
@@ -9,6 +13,10 @@
 
 }
 @media only screen and (orientation: portrait){
+    @keyframes curtain-animation{
+    from {top: calc(-100vh + (100px + 30vh));}
+    to {top:0;}
+    }
     #timeline-grid{
         top:100px;
         grid-template-columns:repeat(4, 1fr);
@@ -19,10 +27,7 @@
     }
 }
 
-@keyframes curtain-animation{
-    from {top: calc(-100vh + (100px + 30vh));}
-    to {top:0;}
-}
+
 @keyframes button-click{
     from{background-color: #e6dfc5;}
     to{background-color: #cfc9b2;}
@@ -106,7 +111,7 @@ input{
 .timeline-column-item div{
     position:relative;
     display: none;
-    background-color: red;
+    /* background-color: red; */
 }
 
 #item1:checked ~ #timeline-grid div #column-content1,
