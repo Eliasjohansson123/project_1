@@ -4,6 +4,9 @@
     display:flex;
     flex-direction: row;
     gap: 23vw;
+    width: 100vw;
+    height:100vh;
+    align-items:center;
     }
 }
 
@@ -12,8 +15,11 @@
     #flexContainer{
       display:flex;
       flex-direction:column;
-      gap: 10vh;
-      width:50vw;
+      justify-content:space-around;
+      gap: 0vh;
+      width:40vw;
+      left:10vw;
+      top: 0vh;
   }
 }
 
@@ -37,15 +43,11 @@ header a{
 #flexContainer{
     position:absolute;
     height:100vh;
-    width:50vw;
-    left:23vw;
     align-content:center;
     justify-content:space-between;
 }
      
 .flexItem{
-    top: 35%;
-    height:25%;
     position:relative;
     color:white;
     padding:1vw;
