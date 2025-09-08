@@ -18,7 +18,7 @@
 
         <div class="change-pic" onclick="carouselSpinBack()"> < </div>
 
-        <div class="carousel-content"><img alt="company1" src="images/companies/comp1.jpg"></div>
+        <div class="carousel-content"><img alt="company1" src="images/companies/comp0.jpg"></div>
 
         <div class="change-pic" onclick="carouselSpinForward()"> > </div>
 
@@ -57,7 +57,7 @@
         }
         function carouselSpinBack() {
 
-            document.querySelector(pic + i).style.backgroundColor = "#fff"
+            document.querySelector("#which-pic" + i).style.backgroundColor = "#fff"
             i--;
             if(i < 0){
                 i=3;
