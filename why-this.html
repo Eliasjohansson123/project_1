@@ -16,42 +16,57 @@
 
     <div id="carousel-container">
 
-        <div class="change-pic" onclick="carouselSpinBack()"></div>
+        <div class="change-pic" onclick="carouselSpinBack()"> < </div>
 
         <div class="carousel-content"><img alt="company1" src="images/companies/comp1.jpg"></div>
 
-        <div class="change-pic" onclick="carouselSpinForward()"></div>
+        <div class="change-pic" onclick="carouselSpinForward()"> > </div>
 
     </div>
 
     <div id="floor-graphics">
-
+        <div id="which-pic0"></div>
+        <div id="which-pic1"></div>
+        <div id="which-pic2"></div>
+        <div id="which-pic3"></div>
     </div>
     
 
     <script type="text/JavaScript">
 
         
-        content = document.querySelector(".carousel-content")
+        carouselContent = document.querySelector(".carousel-content");
 
-        let i = 1;
         
+        let i = 0;
 
         function carouselSpinForward() {
 
-            content.innerHTML = "<img alt='company'" + i + " src='images/companies/comp" + i + ".jpg'>";
-            i++;
-            if(i>4){
-                i=1;
+            document.querySelector("#which-pic" + i).style.backgroundColor = "#fff"
+
+            i++
+            if(i>3){
+                i=0;
             }
+            document.querySelector("#which-pic" + i).style.backgroundColor = "red";
+
+            
+            carouselContent.innerHTML = "<img alt='company'" + i + " src='images/companies/comp" + i + ".jpg'>";
+            document.querySelector("#which-pic" + i).style.backgroundColor = "gray";
+            
         }
         function carouselSpinBack() {
-            content.innerHTML = "<img alt='company'" + i + " src='images/companies/comp" + i + ".jpg'>";
-            i--;
 
-            if(i < 1){
-                i=4;
+            document.querySelector(pic + i).style.backgroundColor = "#fff"
+            i--;
+            if(i < 0){
+                i=3;
             }
+            carouselContent.innerHTML = "<img alt='company'" + i + " src='images/companies/comp" + i + ".jpg'>";
+            document.querySelector("#which-pic" + i).style.backgroundColor = "gray";
+            
+
+            
         }
     </script>
 
