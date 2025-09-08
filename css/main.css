@@ -48,7 +48,6 @@ header a{
 
 #flexContainer{
     position:absolute;
-    height:100vh;
     align-content:center;
     justify-content:space-between;
 }
@@ -70,8 +69,8 @@ body{
 }
 #heroImage{
     position: fixed;
-    width:100vw;
     height: 90vh;
+    width:100vw;
     top:100px;
     background-image: url("../images/ful.jpg");
     background-repeat:no-repeat;

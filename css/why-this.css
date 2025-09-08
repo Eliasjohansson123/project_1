@@ -2,7 +2,7 @@ body{
     padding: 0;
     margin: 0;
 }
-header{
+nav{
     z-index: 1000;
     top:0;
     height:100px;
@@ -11,15 +11,27 @@ header{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size:2em;
     position:sticky;
+    box-shadow: 0 3px 3px #ece;
 }
-header a{
+nav a{
     text-decoration:none;
     color: black;
 }
+#bread-basket{
+    display:flex;
+    justify-content:center;
+}
+#bread{
+    background-color:#fcf;
+    border-radius: 10px;
+    height:25vh;
+    width:50vw;
+    left:auto;
+}
+
 #carousel-container{
     top: 70vh;
     display:flex;
-    background-color: #bbbbbbbb;
     height: 60vh;
     justify-content: center;
     align-items: center;
@@ -28,9 +40,6 @@ header a{
 }
 .carousel-content{
     user-select: none;
-    background-color: antiquewhite;
-    border:1px solid black;
-    border-radius: 10px;
     width: 80%;
     height: 100%;
 }
@@ -47,12 +56,12 @@ header a{
     height: 100px;
     background-color: #fcf;
     border-radius: 10px;
-    z-index: 2;
+    z-index: 0;
 }
 #floor-graphics{
     position:absolute;
     left: calc(50vw - 15vw / 2);
-    top: calc(55vh + 100px);
+    top: calc(80vh + 100px);
     display:flex;
     width: 15vw;
     height: 1vh;

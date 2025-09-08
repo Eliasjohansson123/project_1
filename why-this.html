@@ -7,12 +7,18 @@
     <link rel="stylesheet" href="css/why-this.css">
 </head>
 <body>
-    <header>
-    <a href="index.html">homepage</a>
-    <a href="why-this.html">about</a>
-    <a href="homepage.html">cv</a>
-    <a href="#"></a>
-    </header>
+    <nav>
+        <a href="index.html">homepage</a>
+        <a href="why-this.html">about</a>
+        <a href="homepage.html">cv</a>
+        <a href="#"></a>
+    </nav>
+    <div id="bread-basket">
+        <div id="bread">
+            <h1>Jobb eller nåt</h1>
+            <p>Jättevälskrivet om varför jag vill jobba inom detta område och specifikt detta företag, WOOHOOO!</p>
+        </div>
+    </div>
 
     <div id="carousel-container">
 
@@ -34,15 +40,16 @@
 
     <script type="text/JavaScript">
 
-        
+        clickCheck = true;        
         carouselContent = document.querySelector(".carousel-content");
+        document.querySelector("#which-pic0").style.backgroundColor = "#fcf";
 
         
         let i = 0;
 
         function carouselSpinForward() {
-
-            document.querySelector("#which-pic" + i).style.backgroundColor = "#fff"
+            clickCheck = false;
+            document.querySelector("#which-pic" + i).style.backgroundColor = "#fff";
 
             i++
             if(i>3){
@@ -51,22 +58,34 @@
 
             
             carouselContent.innerHTML = "<img alt='company'" + i + " src='images/companies/comp" + i + ".jpg'>";
-            document.querySelector("#which-pic" + i).style.backgroundColor = "gray";
+            document.querySelector("#which-pic" + i).style.backgroundColor = "#fcf";
             
         }
+
         function carouselSpinBack() {
 
-            document.querySelector("#which-pic" + i).style.backgroundColor = "#fff"
+            clickCheck = false;
+            document.querySelector("#which-pic" + i).style.backgroundColor = "#fff";
             i--;
             if(i < 0){
                 i=3;
             }
             carouselContent.innerHTML = "<img alt='company'" + i + " src='images/companies/comp" + i + ".jpg'>";
-            document.querySelector("#which-pic" + i).style.backgroundColor = "gray";
+            document.querySelector("#which-pic" + i).style.backgroundColor = "#fcf";
             
 
             
         }
+        setInterval(() => {
+            if(clickCheck){
+                carouselSpinForward();
+            }
+            else{
+                clickCheck = true;
+            }
+        }, 3500);
+             
+            
     </script>
 
 </body>
